@@ -29,6 +29,7 @@ def DatetimeToEpoch(*args):
     return (calendar.timegm(t.timetuple()))
 
 def main():
+    SaveDataToExcel(path='add5.xlsx',data=[],append=False)
     driver = DriverSetup()
     # gotit_button = '/html/body/div[4]/div/div/button'
     # WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, gotit_button))).click()
@@ -60,6 +61,6 @@ def main():
             print([txnhash,type,blocknumber, timestamp,from_address,to_address,value,fee,float(fee)/gasprice,gasprice])
             arr.append([txnhash,type,blocknumber, timestamp,from_address,to_address,value,fee,float(fee)/gasprice,gasprice])
             i+=1
-        SaveDataToExcel(path='add5.xlsx',data=arr,append=False)
+        SaveDataToExcel(path='add5.xlsx',data=arr,append=True)
 if __name__ == '__main__':
     main()
