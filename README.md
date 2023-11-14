@@ -16,11 +16,7 @@ This link [Google Driver](https://drive.google.com/drive/folders/1sN_VTVLOvz_DmI
 
 ## Environment Installation
 
-Currently, we are using Python3 for the whole project.
-
-```
-pip install -r requirements.txt
-```
+All necessary libraries will be installed immediately after running the DataCrawler.py file.
 
 ## Project Structure  
 
@@ -32,12 +28,6 @@ The project contains following files:
 
 *Note that: all the codes are run on the parent folder (not `scripts/` or `bash/`)*
 
-## Setting Variable Environment 
-- `.lib`: 
-
-```
-All necessary libraries will be installed immediately after running the DataCrawler.py file.
-```
 
 ## For more information
 
