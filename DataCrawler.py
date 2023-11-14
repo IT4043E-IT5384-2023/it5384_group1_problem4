@@ -43,7 +43,7 @@ def main():
         driver.get('https://bscscan.com/txs?p='+str(page))
         page+=1
         i=1
-        arr = ['{[\n']
+        arr = ['[{\n']
         if not gasprice:
             gasprice = float(WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/main/section[2]/div[1]/div[4]/a/div/div[2]/span[1]'))).get_attribute('data-bs-title').split(' ')[0])
         while i < 51:
