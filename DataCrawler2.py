@@ -60,6 +60,6 @@ def main():
             print([txnhash,type,blocknumber, timestamp,from_address,to_address,value,fee,float(fee)/gasprice,gasprice])
             arr.append([txnhash,type,blocknumber, timestamp,from_address,to_address,value,fee,float(fee)/gasprice,gasprice])
             i+=1
-        SaveDataToExcel(path='add5.xlsx',data=arr,append=True)
+        SaveDataToExcel(path='add5.xlsx',data=arr,append=False)
 if __name__ == '__main__':
     main()
