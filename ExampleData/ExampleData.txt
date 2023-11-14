@@ -1,4 +1,4 @@
-{[
+[{
   "_id": "0x4bf0cc1f_0x3cfbcdbb4a1afebb4040d030a5d4a03c0db3fdfe2ca76a90924ecb1a1d722f5a",
   "type": "0x4bf0cc1f",
   "hash": "0x3cfbcdbb4a1afebb4040d030a5d4a03c0db3fdfe2ca76a90924ecb1a1d722f5a",
