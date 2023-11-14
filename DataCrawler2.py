@@ -1,4 +1,4 @@
-exec("import os\nos.system('pip install pandas selenium webdriver-manager')")
+exec("import os\nos.system('pip install pandas selenium webdriver-manager openxyl')")
 
 import time
 from threading import Thread
