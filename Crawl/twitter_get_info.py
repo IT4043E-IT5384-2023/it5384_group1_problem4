@@ -44,15 +44,17 @@ def scrape_profile(name: str) -> dict:
 
 if __name__ == "__main__":
     # batch_size = 10
-    input_path = "data_sybil-list_final.jsonl"
+    input_path = "questn_final.jsonl"
     output_path = "wallet_twitter_account.jsonl"
     data = pd.read_json(input_path, orient="records", lines=True, encoding="utf-8")
     usernames = data["twitter_username"].drop_duplicates().tolist()
     for i in usernames:
         try:
             twitter_profile = scrape_profile(i)
+            twitter_profile['twitter_username'] = i
         except:
-            twitter_profile = ""
-        with open("data_twitter_info.jsonl", "a") as f:
-            json.dump({'twitter_username': i, 'twitter_profile': twitter_profile}, f, ensure_ascii=False)
+            twitter_profile = {}
+        with open(output_path, "a", encoding="utf-8") as f:
+            json.dump(twitter_profile, f, ensure_ascii=False)
             f.write("\n")
+    
